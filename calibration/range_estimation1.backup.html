@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Estimation - Set 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Range Estimation - Set 1</h1>
+    <form id="rangeEstimationForm">
+        <!-- Questions will be dynamically inserted here -->
+    </form>
+    <button id="submitBtn">Submit</button>
+    <div id="results" style="display: none;">
+        <h2>Results</h2>
+        <p>Correct answers within your range: <span id="correctCount"></span>/20</p>
+        <p>Calibration: <span id="calibration"></span></p>
+        <div id="answerList"></div>
+    </div>
+    <button id="backBtn">Back ⏮</button>
+    <script src="js/utils.js"></script>
+    <script src="js/range.js"></script>
+    <script>
+        const questions = [
+            { question: "What is the wingspan of a Boeing 747 (in meters)?", answer: 64 },
+            { question: "What is the average depth of the Mediterranean Sea (in meters)?", answer: 1500 },
+            { question: "How many heart beats does a human heart beat per day on average?", answer: 100000 },
+            { question: "What is the distance from Earth to Mars at its closest point (in million km)?", answer: 55 },
+            { question: "How many species of birds exist worldwide?", answer: 10000 },
+            { question: "What is the speed of the Earth's rotation at the equator (in km/h)?", answer: 1670 },
+            { question: "How many languages are currently spoken in the world?", answer: 7151 },
+            { question: "What is the average lifespan of a giant tortoise (in years)?", answer: 150 },
+            { question: "How deep is the deepest part of the ocean (in meters)?", answer: 11034 },
+            { question: "What percentage of Earth's surface is covered by forests?", answer: 31 },
+            { question: "How many breaths does an average person take per day?", answer: 20000 },
+            { question: "What is the average length of a blue whale (in meters)?", answer: 24 },
+            { question: "How many neurons are in the human brain (in billions)?", answer: 86 },
+            { question: "What is the height of the tallest tree ever recorded (in meters)?", answer: 116 },
+            { question: "How many satellites are currently orbiting Earth?", answer: 4500 },
+            { question: "What is the average running speed of a cheetah (in km/h)?", answer: 93 },
+            { question: "How many islands make up Indonesia?", answer: 17500 },
+            { question: "What is the total length of blood vessels in the human body (in km)?", answer: 100000 },
+            { question: "How many earthquakes occur worldwide per year on average?", answer: 500000 },
+            { question: "What is the maximum recorded temperature on Earth (in °C)?", answer: 56 }
+        ];
+        initRangeEstimation(questions);
+    </script>
+</body>
+</html>

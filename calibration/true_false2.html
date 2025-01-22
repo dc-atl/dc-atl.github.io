@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True/False Calibration - Set 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>True/False Calibration - Set 2</h1>
+    <form id="trueFalseForm">
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+    <div id="results" style="display: none;">
+        <h2>Results</h2>
+        
+            <p>Correct answers: <span id="correctCount"></span>/20</p>
+            <p>Calibration: <span id="calibration"></span></p>
+            <p><span id="brierScore"></span></p>
+            <div id="answerList"></div>
+        
+    </div>
+    <button id="backBtn">Back ⏮</button>
+    <script src="js/utils.js"></script>
+    <script src="js/trueFalse.js"></script>
+    <script>
+        const questions = [{"question":"The first submarine was built in 1776 and was called the 'Turtle'.","answer":true},{"question":"Some species of bamboo can grow up to two meters in a single day.","answer":true},{"question":"Ancient Romans used flamingo tongues as a delicacy at noble feasts.","answer":true},{"question":"The Sahara Desert was once home to a species of crocodile that climbed trees.","answer":false},{"question":"There's a species of jellyfish that reverts to its juvenile form when stressed.","answer":true},{"question":"The ancient Greeks had a mechanical computer for predicting astronomical events.","answer":true},{"question":"Vikings used the crystallized remains of starfish for navigation.","answer":false},{"question":"There's a type of shark that can survive being completely frozen.","answer":false},{"question":"The first digital computer was powered by water instead of electricity.","answer":true},{"question":"Some species of fungi can create zombie ants to spread their spores.","answer":true},{"question":"Ancient Mayans used chocolate beans as currency.","answer":true},{"question":"The Great Wall of China contains sticky rice in its mortar.","answer":true},{"question":"Medieval knights had specialized armor for fighting left-handed opponents.","answer":false},{"question":"There's a species of octopus that can survive on land for up to 30 minutes.","answer":true},{"question":"The first photograph ever taken took 8 hours of exposure time.","answer":true},{"question":"Ancient Egyptians used electric eels for pain relief therapy.","answer":false},{"question":"Some species of sea cucumber can liquefy themselves when threatened.","answer":true},{"question":"The Romans had a special gladiator class that fought exclusively at night.","answer":false},{"question":"There's a type of desert plant that can survive 100 years without water.","answer":true},{"question":"Ancient Chinese astronomers recorded a supernova that created the Crab Nebula.","answer":true}];
+        init(questions);
+    </script>
+</body>
+</html>

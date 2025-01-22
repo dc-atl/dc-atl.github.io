@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= @title %></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1><%= @title %></h1>
+    <form id="<%= @form_id %>">
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+    <div id="results" style="display: none;">
+        <h2>Results</h2>
+        <% if @type == "range" %>
+            <p>Correct answers within your range: <span id="correctCount"></span></p>
+            <p>Calibration: <span id="calibration"></span></p>
+            <div id="answerList"></div>
+        <% else %>
+            <p>Correct answers: <span id="correctCount"></span>/20</p>
+            <p>Calibration: <span id="calibration"></span></p>
+            <p><span id="brierScore"></span></p>
+            <div id="answerList"></div>
+        <% end %>
+    </div>
+    <button id="backBtn">Back ⏮</button>
+    <script src="js/utils.js"></script>
+    <script src="js/<%= @script %>.js"></script>
+    <script>
+        const questions = <%= @content %>;
+        init(questions);
+    </script>
+</body>
+</html>
